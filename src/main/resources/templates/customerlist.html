@@ -1,18 +1,20 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Customerlist</title>
+    <title>Customers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Customers</h1>
-    <table>
-		<tr>
-		    <th>Name</th>
-		</tr>  
-    	<tr th:each = "customer : ${customer}">
-    		<td th:text="${customer.first_name} + ' ' + ${customer.last_name}"></td>		
-    	</tr>
-     </table>  	
+<h2>Customers</h2>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>name</th>
+    </tr>
+    <tr th:each = "customer: ${customers}">
+        <td th:text="${customer.firstName}">vasile</td>
+        <td th:text="${customer.lastName}">45</td>
+    </tr>
+</table>
 </body>
 </html>
